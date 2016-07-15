@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 
 from setuptools import find_packages, setup
+import versioneer
 
 setup(
     name='bootstrap_cfn',
-    version='0.11.1',
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     url='http://github.com/ministryofjustice/bootstrap_cfn/',
     license='LICENSE',
     author='MOJDS',

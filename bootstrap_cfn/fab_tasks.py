@@ -23,7 +23,7 @@ from bootstrap_cfn.iam import IAM
 from bootstrap_cfn.r53 import R53
 from bootstrap_cfn.utils import tail
 from bootstrap_cfn.vpc import VPC
-
+import _version
 
 # Default fab config. Set via the tasks below or --set
 env.setdefault('application')
@@ -622,7 +622,8 @@ def get_cloudformation_tags():
     """
     return {
         "Env": env.environment,
-        "Application": env.application
+        "Application": env.application,
+        "Bootstrap-cfn Version": __version__
     }
 
 

@@ -1,1 +1,3 @@
 include bootstrap_cfn/config_defaults.yaml
+include versioneer.py
+include bootstrap_cfn/_version.py
