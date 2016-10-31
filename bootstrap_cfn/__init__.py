@@ -1,4 +1,3 @@
+import pkg_resources
 
-from ._version import get_versions
-__version__ = get_versions()['version']
-del get_versions
+__version__ = pkg_resources.require("bootstrap-cfn")[0].version
